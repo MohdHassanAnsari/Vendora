@@ -1,12 +1,20 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import { Login } from "./components/authentication/Login";
+import { Registration } from "./components/authentication/Registration";
+import { Home } from "./components/home/Home";
+import { ProductsDisplay } from "./components/products/ProductsDisplay";
 
 function App() {
   return (
     <>
       <div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/registration" element={<Registration />} />
+          <Route path="/products-display" element={<ProductsDisplay />} />
+        </Routes>
       </div>
     </>
   );
